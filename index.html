@@ -1,4 +1,74 @@
-<Hello class="print">
-Hello AI in Economics!
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Alex’s First Website</title>
+    <meta name="description" content="My first website — clean, aesthetic, and cool." />
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <!-- Animated background blobs -->
+    <div class="bg">
+      <div class="blob b1" aria-hidden="true"></div>
+      <div class="blob b2" aria-hidden="true"></div>
+      <div class="blob b3" aria-hidden="true"></div>
+    </div>
 
-</Hello>
+    <header class="site-header">
+      <div class="container">
+        <a class="brand" href="#" aria-label="Home">
+          <span class="logo-dot" aria-hidden="true"></span>
+          Alex Burke
+        </a>
+        <nav class="actions">
+          <button id="themeToggle" class="btn ghost" aria-label="Toggle theme">Switch Theme</button>
+          <a class="btn" href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero container reveal">
+        <h1>My First Website</h1>
+        <p class="lead">Hey! I’m Alex. This is my first website — designed to be clean, aesthetic, and a little bit cool.</p>
+        <div class="cta">
+          <a class="btn primary" href="#about">About Me</a>
+          <a class="btn" href="#projects">See Projects</a>
+        </div>
+      </section>
+
+      <section id="about" class="cards container reveal">
+        <article class="card">
+          <h2>About</h2>
+          <p>I’m exploring web development and design. This site is a playground for learning HTML, CSS, and JavaScript with style.</p>
+        </article>
+        <article id="projects" class="card">
+          <h2>Projects</h2>
+          <p>Starter projects, experiments, and ideas — all crafted with attention to detail and aesthetics.</p>
+        </article>
+        <article id="contact" class="card">
+          <h2>Contact</h2>
+          <p>Want to say hi? Reach out any time. I’d love to connect.</p>
+          <div class="socials">
+            <a class="icon" href="mailto:alex@example.com" aria-label="Email">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5L4 8V6l8 5 8-5v2Z"/></svg>
+            </a>
+            <a class="icon" href="#" aria-label="Github">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.48 2 2 6.65 2 12.35c0 4.53 2.87 8.37 6.85 9.73.5.1.68-.22.68-.49 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.38-3.37-1.38-.46-1.2-1.12-1.52-1.12-1.52-.92-.65.07-.64.07-.64 1.02.07 1.56 1.08 1.56 1.08.9 1.6 2.36 1.14 2.94.87.09-.67.35-1.14.63-1.4-2.22-.26-4.55-1.16-4.55-5.14 0-1.14.39-2.08 1.03-2.81-.1-.26-.45-1.3.1-2.7 0 0 .84-.28 2.75 1.07a9.26 9.26 0 0 1 2.5-.35c.85 0 1.71.12 2.5.35 1.9-1.35 2.74-1.07 2.74-1.07.56 1.4.21 2.44.11 2.7.64.73 1.03 1.67 1.03 2.81 0 3.99-2.34 4.87-4.57 5.13.36.32.67.93.67 1.88 0 1.36-.01 2.45-.01 2.78 0 .27.18.6.69.49A10.05 10.05 0 0 0 22 12.35C22 6.65 17.52 2 12 2Z"/></svg>
+            </a>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© <span id="year"></span> Alex Burke • Built with HTML, CSS, and a sprinkle of JS</p>
+      </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+  </body>
+  </html>
+
