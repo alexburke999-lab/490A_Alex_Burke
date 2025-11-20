@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Class Project</title>
+  <style>
+    :root {
+      --navy: #1d3c6a;
+      --navy-dark: #132949;
+      --muted: #5b6475;
+      --border: #d8dde6;
+      --card-bg: #f6f8fb;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Poppins", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+      background: #f0f2f6;
+      color: #1f2937;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page {
+      max-width: 1100px;
+      padding: 32px 24px 80px;
+      margin: 0 auto;
+    }
+
+    .breadcrumb {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      color: var(--navy);
+      margin-bottom: 12px;
+      cursor: pointer;
+      transition: color 0.2s ease, transform 0.2s ease;
+    }
+
+    .breadcrumb:hover {
+      color: var(--navy-dark);
+      transform: translateX(-3px);
+    }
+
+    .title {
+      font-size: 44px;
+      margin: 0 0 4px;
+      color: var(--navy);
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+
+    .subtitle {
+      margin: 0 0 24px;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 10px 26px rgba(29, 60, 106, 0.06);
+    }
+
+    .section-title {
+      margin: 32px 0 16px;
+      font-size: 22px;
+      color: #111827;
+    }
+
+    .overview p {
+      margin: 0 0 12px;
+      color: #444c59;
+      font-size: 15px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+      margin-top: 12px;
+    }
+
+    .material {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      box-shadow: 0 12px 24px rgba(0, 20, 60, 0.05);
+    }
+
+    .icon-circle {
+      height: 64px;
+      width: 64px;
+      margin: 0 auto;
+      border-radius: 50%;
+      background: linear-gradient(145deg, #e4ebf5, #d1d8e3);
+      display: grid;
+      place-items: center;
+      color: var(--navy);
+      font-size: 26px;
+      font-weight: 700;
+    }
+
+    .material h3 {
+      margin: 0;
+      font-size: 18px;
+      color: #0f172a;
+    }
+
+    .material p {
+      margin: 0;
+      color: #5b6475;
+      font-size: 14px;
+      min-height: 42px;
+    }
+
+    .button {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px 18px;
+      background: var(--navy);
+      color: var(--white);
+      border-radius: 10px;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.12s ease, box-shadow 0.12s ease, background-color 0.12s ease;
+      text-decoration: none;
+    }
+
+    .button.secondary {
+      background: #eef2f7;
+      color: var(--navy);
+      border: 1px solid #e0e6f0;
+    }
+
+    .button:hover {
+      background: var(--navy-dark);
+      transform: translateY(-1px);
+      box-shadow: 0 10px 18px rgba(19, 41, 73, 0.12);
+    }
+
+    .button.secondary:hover {
+      background: #e5ebf6;
+      box-shadow: 0 8px 14px rgba(19, 41, 73, 0.08);
+    }
+
+    .note {
+      margin: 0;
+      font-size: 12px;
+      color: #8a92a0;
+    }
+
+    .profile-card {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 18px;
+      align-items: center;
+    }
+
+    .photo {
+      width: 100%;
+      max-width: 260px;
+      aspect-ratio: 1 / 1;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #dfe7f3, #cfd9ec);
+      display: grid;
+      place-items: center;
+      color: #2d3f5f;
+      font-weight: 700;
+      font-size: 20px;
+      letter-spacing: 0.4px;
+      border: 1px solid var(--border);
+    }
+
+    .about h3 {
+      margin: 0 0 10px;
+      font-size: 20px;
+      color: #111827;
+    }
+
+    .about p {
+      margin: 0 0 10px;
+      color: #444c59;
+      font-size: 15px;
+    }
+
+    @media (max-width: 800px) {
+      .title {
+        font-size: 34px;
+      }
+
+      .profile-card {
+        grid-template-columns: 1fr;
+      }
+
+      .page {
+        padding: 24px 18px 60px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <a class="breadcrumb" href="#">
+      <span aria-hidden="true">←</span>
+      Back to Home
+    </a>
+
+    <header>
+      <h1 class="title">AI Class Project</h1>
+      <p class="subtitle">Artificial Intelligence Course | Fall 2024</p>
+    </header>
+
+    <section class="card overview">
+      <h2 style="margin-top: 0; margin-bottom: 12px;">Project Overview</h2>
+      <p>This project explores the application of artificial intelligence techniques in the context of managerial economics. The focus is on developing practical AI solutions that address real-world business challenges.</p>
+      <p>The project combines theoretical understanding with hands-on implementation, demonstrating proficiency in AI methodologies and their strategic applications in business decision-making.</p>
+      <p>Key areas covered include machine learning algorithms, data analysis, predictive modeling, and the ethical implications of AI in business contexts.</p>
+    </section>
+
+    <h2 class="section-title">Project Materials</h2>
+    <div class="grid">
+      <div class="material">
+        <div class="icon-circle" aria-hidden="true">🖥️</div>
+        <h3>Presentation Slides</h3>
+        <p>View the project presentation deck</p>
+        <a class="button" href="#" role="button">View Presentation</a>
+        <p class="note">(Will be available soon)</p>
+      </div>
+      <div class="material">
+        <div class="icon-circle" aria-hidden="true">📄</div>
+        <h3>Project Report</h3>
+        <p>Read the complete project documentation</p>
+        <a class="button secondary" href="#" role="button">View Report</a>
+        <p class="note">(Placeholder — upload your project PDF)</p>
+      </div>
+    </div>
+
+    <h2 class="section-title">Your Name</h2>
+    <p class="subtitle" style="margin: 0 0 16px; font-size: 16px;">Undergraduate Student, Managerial Economics | University of Massachusetts Amherst</p>
+
+    <section class="card">
+      <div class="profile-card">
+        <div class="photo">Your Photo</div>
+        <div class="about">
+          <h3>About Me</h3>
+          <p>Welcome! I'm a Managerial Economics student at UMass Amherst with a strong interest in artificial intelligence and its applications in business and economics.</p>
+          <p>I'm passionate about leveraging data-driven insights and emerging technologies to solve complex problems. This portfolio showcases my academic work and projects in the field of AI.</p>
+          <p>Feel free to explore my resume and projects below to learn more about my background and experience.</p>
+        </div>
+      </div>
+    </section>
+
+    <h2 class="section-title">Explore</h2>
+    <div class="grid">
+      <div class="material">
+        <div class="icon-circle" aria-hidden="true">📝</div>
+        <h3>Resume</h3>
+        <p>View my professional background, education, and experience</p>
+        <a class="button" href="#" role="button">View Resume</a>
+      </div>
+      <div class="material">
+        <div class="icon-circle" aria-hidden="true">📁</div>
+        <h3>Projects</h3>
+        <p>Explore my AI class project and academic work</p>
+        <a class="button secondary" href="#" role="button">View Projects</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
