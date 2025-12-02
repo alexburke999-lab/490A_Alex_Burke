@@ -227,6 +227,35 @@ a {
   font-size: 15px;
 }
 
+.resume-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.resume-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.pdf-frame {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--card-bg);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  height: 80vh;
+  min-height: 420px;
+}
+
+.pdf-frame iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: var(--white);
+}
+
 @media (max-width: 800px) {
   .title {
     font-size: 34px;

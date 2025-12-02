@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Resume | Alex Burke</title>
+    <meta name="description" content="Resume page for Alex Burke with an embedded, downloadable PDF." />
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <div class="page">
+      <a class="breadcrumb" href="index.html" aria-label="Back to home">
+        <span aria-hidden="true">←</span>
+        Back to Home
+      </a>
+
+      <header>
+        <h1 class="title">Resume</h1>
+        <p class="subtitle small">Preview the PDF or download a copy.</p>
+      </header>
+
+      <section class="card resume-actions">
+        <div class="resume-buttons">
+          <a class="button" href="resume.pdf" role="button">Download PDF</a>
+          <a class="button secondary" href="resume.pdf" target="_blank" rel="noopener" role="button">Open in New Tab</a>
+        </div>
+        <p class="note">If the preview doesn't load, use one of the buttons above to view the file.</p>
+      </section>
+
+      <section class="card">
+        <div class="pdf-frame" role="region" aria-label="Resume PDF preview">
+          <iframe src="resume.pdf" title="Alex Burke Resume PDF" loading="lazy"></iframe>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
