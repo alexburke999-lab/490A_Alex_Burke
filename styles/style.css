@@ -249,13 +249,20 @@ a {
   min-height: 420px;
 }
 
+.pdf-viewer,
 .pdf-frame object,
-.pdf-frame iframe {
+.pdf-frame iframe,
+.pdf-frame embed {
   width: 100%;
   height: 100%;
   border: none;
   display: block;
   background: var(--white);
+}
+
+.pdf-fallback {
+  margin: 12px;
+  font-size: 14px;
 }
 
 @media (max-width: 800px) {
