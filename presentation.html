@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Wealth Management Presentation | Alex Burke</title>
+    <meta name="description" content="Embedded presentation deck for the Wealth Management project." />
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <div class="page">
+      <a class="breadcrumb" href="projects.html" aria-label="Back to projects">
+        <span aria-hidden="true">←</span>
+        Back to Projects
+      </a>
+
+      <header>
+        <h1 class="title">Wealth Management Presentation</h1>
+        <p class="subtitle small">Preview the deck or download a copy.</p>
+      </header>
+
+      <section class="card resume-actions">
+        <div class="resume-buttons">
+          <a class="button" href="wealth-management-industry.pdf" role="button" download>Download PDF</a>
+          <a class="button secondary" href="wealth-management-industry.pdf" target="_blank" rel="noopener" role="button">Open in New Tab</a>
+        </div>
+        <p class="note">If the preview does not load, use the buttons above to view or download the file.</p>
+      </section>
+
+      <section class="card">
+        <div class="pdf-frame" role="region" aria-label="Wealth Management presentation viewer">
+          <object class="pdf-viewer" data="wealth-management-industry.pdf#view=FitH" type="application/pdf">
+            <embed src="wealth-management-industry.pdf#view=FitH" type="application/pdf" />
+            <p class="pdf-fallback">
+              Unable to display the PDF here. You can <a href="wealth-management-industry.pdf" target="_blank" rel="noopener">open it in a new tab</a> or download it instead.
+            </p>
+          </object>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
