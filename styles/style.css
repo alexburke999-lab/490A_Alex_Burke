@@ -270,7 +270,8 @@ a {
   align-items: center;
   gap: 10px;
   flex-wrap: wrap;
-  margin-top: 8px;
+  margin-top: 4px;
+  margin-bottom: 18px;
   font-size: 15px;
   color: #1f2a44;
 }
