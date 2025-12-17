@@ -21,19 +21,20 @@
 
       <section class="card resume-actions">
         <div class="resume-buttons">
-          <a class="button" href="490AIFinalProjectReport.docx" role="button" download>Download DOCX</a>
-          <a class="button secondary" href="https://raw.githubusercontent.com/alexburke999-lab/490A_Alex_Burke/main/490AIFinalProjectReport.docx" target="_blank" rel="noopener" role="button">Open Raw File</a>
+          <a class="button" href="490AIFinalProjectReport.pdf" role="button" download>Download PDF</a>
+          <a class="button secondary" href="490AIFinalProjectReport.pdf" target="_blank" rel="noopener" role="button">Open in New Tab</a>
         </div>
         <p class="note">If the embed does not load, use the links above to open or download the report.</p>
       </section>
 
       <section class="card">
         <div class="pdf-frame" role="region" aria-label="Project report viewer">
-          <iframe
-            src="https://view.officeapps.live.com/op/embed.aspx?src=https%3A%2F%2Fraw.githubusercontent.com%2Falexburke999-lab%2F490A_Alex_Burke%2Fmain%2F490AIFinalProjectReport.docx"
-            title="Project Report"
-            loading="lazy"
-          ></iframe>
+          <object class="pdf-viewer" data="490AIFinalProjectReport.pdf#view=FitH" type="application/pdf">
+            <embed src="490AIFinalProjectReport.pdf#view=FitH" type="application/pdf" />
+            <p class="pdf-fallback">
+              Unable to display the PDF here. You can <a href="490AIFinalProjectReport.pdf" target="_blank" rel="noopener">open it in a new tab</a> or download it instead.
+            </p>
+          </object>
         </div>
       </section>
     </div>
