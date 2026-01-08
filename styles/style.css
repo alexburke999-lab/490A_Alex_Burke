@@ -182,7 +182,7 @@ a {
 .profile-card {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  gap: 18px;
+  gap: 24px;
   align-items: center;
 }
 
@@ -191,6 +191,7 @@ a {
   max-width: 220px;
   height: 220px;
   aspect-ratio: 1 / 1;
+  justify-self: center;
   border-radius: 12px;
   background: linear-gradient(135deg, #dfe7f3, #cfd9ec);
   display: grid;
