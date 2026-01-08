@@ -188,12 +188,16 @@ a {
 
 .photo {
   width: 100%;
-  max-width: 260px;
+  max-width: 220px;
+  height: 220px;
   aspect-ratio: 1 / 1;
   border-radius: 12px;
   background: linear-gradient(135deg, #dfe7f3, #cfd9ec);
   display: grid;
   place-items: center;
+  padding: 10px;
+  box-sizing: border-box;
+  overflow: hidden;
   color: #2d3f5f;
   font-weight: 700;
   font-size: 20px;
@@ -204,7 +208,8 @@ a {
 .photo img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  display: block;
   border-radius: inherit;
 }
 
